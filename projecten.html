@@ -6,42 +6,82 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div style="background-color: darkgray;">
+<body style="background-color: darkgray;">
+  <div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <div style="padding-left: 43%;">
-        <a class="navbar-brand" href="#">portofolio</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div style="padding-left: 43%;">
+          <a class="navbar-brand" href="#">portofolio</a>
+        </div>
+      </div>
+      <div class="justify-content-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <div style="background-color: burlywood;">
+              <div class="card-body">
+                <h5 class="card-title">textAdventure</h5>
+                <p>Het project textAdventure was de eerste project wat we met een programeertaal hadden</p>
+                <a href="https://github.com/LeonBijker/textadventure">De link naar de repository van mijn textadventure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <div style="background-color: burlywood;">
+              <div class="card-body">
+                <h5 class="card-title">arcadegame</h5>
+                <p>Het project arcadegame was het laatste project dat wij in ons eerste leerjaar hadden en dat heb ik samen met nog 3 anderen studenten gedaan.</p>
+                <a href="https://github.com/JorickWassink/BumperBeats">De link naar de repository van de arcadegame</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="justify-content-center">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>
-</nav>
-</div>
-<div style="padding-left: 35%;">
-  <h1>under construction</h1>
-</div>
-<div style="padding-left: 45%;"> 
-    <h1><a href="index.html" class="btn-primary">go back</a></h1>
-    
-  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <div style="background-color: burlywood;">
+              <div class="card-body">
+                <h5 class="card-title">microgame</h5>
+                <p>Het project microgame is het project waar wij in de aankomende 5 weken aan gaan werken (dag van vandaag is 27-09-2024)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+   
+    
+    <div style="padding-left: 45%;"> 
+      <h1><a href="index.html" class="btn-primary">go back</a></h1>
+    </div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
   </script>
 </body>
+
 
 </html>
