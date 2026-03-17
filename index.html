@@ -1,83 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>portfolio website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="pictures/lion.jpeg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" href="pictures/lion.jpeg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: darkgray; color: black; }
+    .fade { transition: opacity 0.3s; opacity: 0; }
+    .fade.show { opacity: 1; }
+    .lang-toggle { cursor: pointer; margin-left: 10px; }
+  </style>
 </head>
+<body>
 
-<body style="background-color: darkgray">
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="About me.html">About me</a>
-      <a class="navbar-brand" href="info.html">programming languages</a>
-      <a class="navbar-brand" href="index.html" ><b></b>portfolio</b></a>
-      <a class="navbar-brand" href="projecten.html">Projects</a>
-      <a class="navbar-brand" href="contacts.html">Contacts</a>
-      
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand lang" data-en="About Me" data-nl="Over mij" href="About me.html">About Me</a>
+    <a class="navbar-brand" href="index.html"><b>Portfolio</b></a>
+    <a class="navbar-brand lang" data-en="Contact" data-nl="Contact" href="contacts.html">Contact</a>
+    <div class="ms-auto">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Language</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+          <li><a class="dropdown-item" href="#" onclick="setLanguage('nl')">Dutch</a></li>
+        </ul>
+      </div>
     </div>
-  </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card" style="width: 18rem;">
-            <div style="background-color: burlywood;">
-            <img src="pictures/programeertalen.jpeg" class="card-img-top" alt="csharp logo">
-            <div class="card-body">
-                <h2 class="card-title">all programming languages i know</h2>
-                <p class="card-text">
-                  Here i will show all the programming languages i know
-                </p>
-                <h3><a href="info.html" class="btn-primary">see here</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card" style="width: 18rem;">
-            <div style="background-color: burlywood;">
-              <img src="pictures/projects.png" class="card-img-top" alt="projects">
-              <div class="card-body">
-                <h2 class="card-title">Projects</h2>
-                <p class="card-text">
-                  here i will show all the projects i have done</p>
-                  <h3><a href="projecten.html" class="btn-primary">see here</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card" style="width: 18rem;">
-            <div style="background-color: burlywood;">
-              <img src="pictures/contact-me.jpg" class="card-img-top" alt="projects">
-              <div class="card-body">
-                <h2 class="card-title">contacts</h2>
-                <p class="card-text">
-                  here you can see how you are able to get in contact with me</p>
-                  <h3><a href="contacts.html" class="btn-primary">see here</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card" style="width: 18rem;">
-            <div style="background-color: burlywood;">
-              <img src="pictures/about-me.png" class="card-img-top" alt="projects">
-              <div class="card-body">
-                <h2 class="card-title">About me</h2>
-                <p class="card-text">
-                 here you can see more detail about me</p>
-                  <h3><a href="About me.html" class="btn-primary">see here</a></h3>
-              </div>
-            </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-6 mb-4">
+      <div class="card text-dark" style="width: 18rem;">
+        <div style="background-color: burlywood;">
+          <img src="pictures/programeertalen.jpeg" class="card-img-top" alt="Languages">
+          <div class="card-body">
+            <h2 class="card-title lang fade" data-en="All Programming Languages I Know" data-nl="Alle programmeertalen die ik ken">All Programming Languages I Know</h2>
+            <p class="card-text lang fade" data-en="Here I show the programming languages I am proficient in." data-nl="Hier laat ik zien welke programmeertalen ik beheers.">Description</p>
+            <a href="info.html" class="btn btn-primary lang fade" data-en="View Here" data-nl="Bekijk hier">View Here</a>
           </div>
         </div>
       </div>
+    </div>
 
+    <div class="col-sm-6 mb-4">
+      <div class="card text-dark" style="width: 18rem;">
+        <div style="background-color: burlywood;">
+          <img src="pictures/projects.png" class="card-img-top" alt="Projects">
+          <div class="card-body">
+            <h2 class="card-title lang fade" data-en="Projects" data-nl="Projecten">Projects</h2>
+            <p class="card-text lang fade" data-en="Here I show all the projects I have made." data-nl="Hier laat ik alle projecten zien die ik heb gemaakt.">Description</p>
+            <a href="projecten.html" class="btn btn-primary lang fade" data-en="View Here" data-nl="Bekijk hier">View Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 mb-4">
+      <div class="card text-dark" style="width: 18rem;">
+        <div style="background-color: burlywood;">
+          <img src="pictures/contact-me.jpg" class="card-img-top" alt="Contact">
+          <div class="card-body">
+            <h2 class="card-title lang fade" data-en="Contact" data-nl="Contact">Contact</h2>
+            <p class="card-text lang fade" data-en="Here you can see how to contact me." data-nl="Hier kun je zien hoe je contact met mij kunt opnemen.">Description</p>
+            <a href="contacts.html" class="btn btn-primary lang fade" data-en="View Here" data-nl="Bekijk hier">View Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 mb-4">
+      <div class="card text-dark" style="width: 18rem;">
+        <div style="background-color: burlywood;">
+          <img src="pictures/about-me.png" class="card-img-top" alt="About Me">
+          <div class="card-body">
+            <h2 class="card-title lang fade" data-en="About Me" data-nl="Over Mij">About Me</h2>
+            <p class="card-text lang fade" data-en="Here you can find more details about me." data-nl="Hier kun je meer details over mij vinden.">Description</p>
+            <a href="About me.html" class="btn btn-primary lang fade" data-en="View Here" data-nl="Bekijk hier">View Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  document.querySelectorAll('.lang').forEach(el => {
+    el.classList.remove('show');
+    el.offsetWidth;
+    el.textContent = el.getAttribute(`data-${lang}`);
+    el.classList.add('show');
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('lang') || 'en';
+  setLanguage(savedLang);
+});
+</script>
 </body>
-
 </html>

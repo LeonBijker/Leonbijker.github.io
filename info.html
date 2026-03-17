@@ -1,92 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>portfolio website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="pictures/lion.jpeg" type="image/x-icon">
-</head>
-
-<body>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div style="background-color: darkgray;">
- 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="About me.html">over mij</a>
-      <a class="navbar-brand" href="index.html" ><b></b>portfolio</b></a>
-      <a class="navbar-brand" href="contacts.html">contacten</a>
-    </div>
-</div>
-</nav>
-<div style="flex-direction: row;">
-    <p>html/css <br>
-        <img src="pictures/html-css.png" alt="html/css logo"></p>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="padding-left: 35%;padding-right: 30%;"></div>
-          </div>
-          <div style="flex-direction: column;">
-            <img src="pictures/html-code.png" alt="html code" style="width: 800px; height: 500px;">
-            <img src="pictures/css-code.png" alt="css code">
-          </div>
-    <p> javascript<br>
-        <img src="pictures/javascript.png" alt="javascript logo"></p>
-        <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="padding-left: 30%;padding-right: 10%;"></div>
-      </div>
-      <img src="pictures/javascript-code.png" alt="javascript code">
-        <p>bootstrap<br>
-            <img src="pictures/bootstrap.png" alt="bootstrap logo"></p>
-            <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="padding-left: 20%;padding-right: 15%;"></div>
-          </div>    
-          <img src="pictures/bootstrap-code.png">
-            <p>
-        csharp<br>
-        <img src="pictures/csharp.png" alt="csharp logo">
-        <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="padding-left: 40%;padding-right: 40%;"></div>
-      </div>
-      <img src="pictures/csharp-code.png">
-      </p>
-      <p> php<br>
-        <img src="pictures/php.png" alt="php logo">
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="padding-left: 10%;padding-right: 10%;"></div>
-        </div>
-        <img src="pictures/php-code.png">  
-      </p>
-      <p> sql <br>  
-        <img src="pictures/sql.png" alt="sql logo">
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="padding-left: 5%;padding-right: 10%;"></div>
-        </div>
-        <img src="pictures/sql-code.png"> 
-      </p>
-      <p> Mendix <br>  
-        <img src="pictures/mendix.jpg" alt="sql logo">
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="padding-left: 40%;padding-right: 10%;"></div>
-        </div>
-      </p>
-</div>
-<div style="padding-left: 45%;">
-  <h1><a href="index.html" class="btn-primary">go back</a></h1>
-  
-</div>
-  </div>
- 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
-</body>
+  <title>Skills - Portfolio</title>
+  <link rel="icon" href="pictures/lion.jpeg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: darkgray; color: black; }
+    .fade { transition: opacity 0.3s; opacity: 0; }
+    .fade.show { opacity: 1; }
+    .lang-toggle { cursor: pointer; margin-left: 10px; }
+  </style>
+</head>
+<body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand lang" data-en="About Me" data-nl="Over mij" href="About me.html">About Me</a>
+    <a class="navbar-brand" href="index.html"><b>Portfolio</b></a>
+    <a class="navbar-brand lang" data-en="Contact" data-nl="Contact" href="contacts.html">Contact</a>
+    <div class="ms-auto">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Language</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+          <li><a class="dropdown-item" href="#" onclick="setLanguage('nl')">Dutch</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="mb-4">
+    <h2 class="lang fade" data-en="HTML / CSS" data-nl="HTML / CSS">HTML / CSS</h2>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" style="width:65%"></div>
+    </div>
+    <img src="pictures/html-code.png" class="img-fluid" alt="HTML/CSS Code">
+  </div>
+
+  <div class="mb-4">
+    <h2 class="lang fade" data-en="JavaScript" data-nl="JavaScript">JavaScript</h2>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" style="width:40%"></div>
+    </div>
+    <img src="pictures/javascript-code.png" class="img-fluid" alt="JavaScript Code">
+  </div>
+
+  <div class="mb-4">
+    <h2 class="lang fade" data-en="Bootstrap" data-nl="Bootstrap">Bootstrap</h2>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" style="width:35%"></div>
+    </div>
+    <img src="pictures/bootstrap-code.png" class="img-fluid" alt="Bootstrap Code">
+  </div>
+
+  <div class="mb-4">
+    <h2 class="lang fade" data-en="C#" data-nl="C#">C#</h2>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" style="width:80%"></div>
+    </div>
+    <img src="pictures/csharp-code.png" class="img-fluid" alt="C# Code">
+  </div>
+
+  <div class="mb-4">
+    <h2 class="lang fade" data-en="PHP" data-nl="PHP">PHP</h2>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" style="width:20%"></div>
+    </div>
+    <img src="pictures/php-code.png" class="img-fluid" alt="PHP Code">
+  </div>
+
+  <div class="mb-4">
+    <h2 class="lang fade" data-en="SQL" data-nl="SQL">SQL</h2>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" style="width:15%"></div>
+    </div>
+    <img src="pictures/sql-code.png" class="img-fluid" alt="SQL Code">
+  </div>
+
+  <div class="mb-4">
+    <h2 class="lang fade" data-en="Mendix" data-nl="Mendix">Mendix</h2>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" style="width:50%"></div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="index.html" class="btn btn-primary lang fade" data-en="Go Back" data-nl="Ga Terug">Go Back</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  document.querySelectorAll('.lang').forEach(el => {
+    el.classList.remove('show');
+    el.offsetWidth;
+    el.textContent = el.getAttribute(`data-${lang}`);
+    el.classList.add('show');
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('lang') || 'en';
+  setLanguage(savedLang);
+});
+</script>
+</body>
 </html>
