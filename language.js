@@ -4,10 +4,7 @@ function setLanguage(lang) {
   document.querySelectorAll('.lang').forEach(el => {
     const text = el.getAttribute(`data-${lang}`);
     if (text) {
-      el.classList.remove('show');
-      el.offsetWidth;
       el.textContent = text;
-      el.classList.add('show');
     }
   });
 }
