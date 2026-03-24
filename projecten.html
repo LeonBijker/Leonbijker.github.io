@@ -105,6 +105,16 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  document.querySelectorAll('.lang').forEach(el => {
+    el.classList.remove('show');
+    el.offsetWidth;
+    el.textContent = el.getAttribute(`data-${lang}`);
+    el.classList.add('show');
+  });
+}
+
 // Show/hide full text for cards
 function toggleText(button) {
   const card = button.closest('.card-body');
@@ -120,7 +130,11 @@ function toggleText(button) {
     button.textContent = "View More";
   }
 }
-;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('lang') || 'en';
+  setLanguage(savedLang);
+});
 </script>
 <script src="js/language.js"></script>
 </body>
