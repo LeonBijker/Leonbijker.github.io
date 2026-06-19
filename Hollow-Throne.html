@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hollow Throne - Portfolio</title>
+  <link rel="icon" href="pictures/lion.jpeg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: darkgray; color: black; }
+    .lang-toggle { cursor: pointer; margin-left: 10px; }
+    iframe { max-width: 100%; }
+    img { max-width: 100%; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand lang" data-en="About Me" data-nl="Over mij" href="About me.html">About Me</a>
+    <a class="navbar-brand" href="index.html"><b>Portfolio</b></a>
+    <a class="navbar-brand lang" data-en="Contact" data-nl="Contact" href="contacts.html">Contact</a>
+    <div class="ms-auto">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Language</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+          <li><a class="dropdown-item" href="#" onclick="setLanguage('nl')">Dutch</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+
+  <h2 class="lang" data-en="The Hollow Throne" data-nl="The Hollow Throne">The Hollow Throne</h2>
+
+<div class="mt-4">
+    <p class="lang" data-en="this is some of the code that i wrote for hollow throne ( in specific this is the pause menu and game manager scripts)." data-nl="Dit is een deel van de code die ik heb geschreven voor Hollow Throne (specifiek de scripts voor het pauzemenu en de gamemanager)."></p>
+    <img src="pictures/hollow-throne-code1.png" alt="Code 1">
+    <img src="pictures/hollow-throne-code2.png" alt="Code 2">
+  </div>
+ 
+ <div class="text-center mt-4">
+    <a href="https://github.com/LeonBijker/The-Hollow-Throne" class="btn btn-primary lang" data-en="Link to the repository" data-nl="Link to the repository">Link to the repository</a>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="projecten.html" class="btn btn-primary lang" data-en="Go Back" data-nl="Ga Terug">Go Back</a>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="language.js"></script>
+</body>
+</html>
